@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "sns:ListTagsForResource",
+                "sns:GetTopicAttributes",
+                "sns:GetDataProtectionPolicy"
+            ],
+            "Resource": "arn:aws:sns:*:500803260723:*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "sns:ListPhoneNumbersOptedOut",
+                "sns:GetEndpointAttributes",
+                "sns:GetSMSSandboxAccountStatus",
+                "sns:GetPlatformApplicationAttributes",
+                "sns:GetSubscriptionAttributes",
+                "sns:GetSMSAttributes",
+                "sns:CheckIfPhoneNumberIsOptedOut"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
