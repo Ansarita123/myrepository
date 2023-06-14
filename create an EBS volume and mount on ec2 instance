@@ -1,0 +1,17 @@
+EC2 –> Volumes and create a new volume 
+Select the created volume, right-click and select the “attach volume” option.
+Then select action and attached the vollume
+go to moboxterm and take ssh of instance 
+type lsblk
+Check if the volume has any data using the following command.
+sudo file -s /dev/xvdf
+Format the volume to the ext4 filesystem using the following command.
+sudo mkfs -t ext4 /dev/xvdf
+you can cheak formated partion by lsblk
+sudo mkfs -t xfs /dev/xvdf
+Mount the volume to “newvolume” directory using the following command.
+sudo mount /dev/xvdf /newvolume/
+lsblk -fs
+now make the mount point persistance by Vim /etc/fastab
+ mount /dev/xvdf1 /mnt/tahreem
+ Now you will see new volume mounted successfully
